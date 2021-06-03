@@ -54,8 +54,8 @@
 
         <div class="login-form">
           <form action="index.html" name="login">
-            <input  name="email"  placeholder="E-mail Address">
-            <input type="password" placeholder="Password">
+            <input  type="email" name="email"  placeholder="E-mail Address">
+            <input  type="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
 
             <div class="remember-form">
               <input type="checkbox">
