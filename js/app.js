@@ -28,6 +28,23 @@ rowClasses.forEach(element => {
 })
 }
 
+// Validation
+function ValidateEmail(inputText)
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(inputText.value.match(mailformat))
+{
+alert("Welcome to Pyramids!");
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.register.user_email.focus()
+document.login.email.focus()
+return false;
+}
+}
+
 // Theme-Mode
 
 window.onload = function() {
