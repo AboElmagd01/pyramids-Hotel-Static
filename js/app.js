@@ -1,13 +1,3 @@
-// CLOSE THE NAV WHEN NAVLNKS ARE CLICKED (MOBILE ONLY)
-let navList = document.querySelector('.nav-list');
-let navLinks = document.querySelectorAll('.nav-link');
-
-navLinks.forEach(function (navLink) {
-    navLink.addEventListener('click', function () {
-        navList.style.left = '-100%';
-    })
-});
-
 // TESTIMONIAL SLIDER
 $('.slider').slick({
     slidesToShow: 1,
@@ -17,6 +7,8 @@ $('.slider').slick({
     fade: true,
     arrows: false
 });
+
+
 // Rooms Layout
 
 
@@ -36,7 +28,7 @@ rowClasses.forEach(element => {
 })
 }
 
-// Dark-Mode
+// Theme-Mode
 
 window.onload = function() {
       let currentTheme = localStorage.getItem("mytheme") || "default";
@@ -63,3 +55,13 @@ window.onload = function() {
         localStorage.setItem("mytheme", newTheme);
       }
     };
+
+// CLOSE THE NAV WHEN NAVLNKS ARE CLICKED MOBILE ONLY
+let navList = document.querySelector('.nav-list');
+let navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(function (navLink) {
+    navLink.addEventListener('click', function () {
+        navList.style.left = '-100%';
+    })
+});
