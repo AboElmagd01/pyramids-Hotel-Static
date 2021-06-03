@@ -39,7 +39,6 @@ alert("Welcome to Pyramids!");
 else
 {
 alert("You have entered an invalid email address!");
-document.register.user_email.focus()
 document.login.email.focus()
 return false;
 }
