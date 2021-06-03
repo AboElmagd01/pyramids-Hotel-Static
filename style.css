@@ -444,6 +444,7 @@ label #close {
   width: 90vw;
   height: 100vh;
     color: var(--main-color);
+    padding-bottom: 50px;
 
 }
 .timetable .selected{
