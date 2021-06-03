@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SignIn - Pyramids</title>
+
+    <style>
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.bg-illustration {
+  position: relative;
+  height: 100vh;
+  width: 1194px;
+  background: url("https://www.thespruce.com/thmb/j05RKc2hqf9VB7f46EirnYa8bUk=/1414x1414/smart/filters:no_upscale()/business-handshake-in-glass-reflection-in-office-675872871-31a95e1d4fd8433088e738228fd9d3dc.jpg") no-repeat center center scroll;
+  background-size: cover;
+  float: left;
+  -webkit-animation: bgslide 2.3s forwards;
+          animation: bgslide 2.3s forwards;
+}
+.bg-illustration img {
+  width: 248px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: auto;
+  margin: 19px 0 0 25px;
+}
+
+@-webkit-keyframes bgslide {
+  from {
+    left: -100%;
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    width: 1194px;
+    opacity: 1;
+  }
+}
+
+@keyframes bgslide {
+  from {
+    left: -100%;
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    width: 1194px;
+    opacity: 1;
+  }
+}
+
+
+.login {
+  max-height: 100vh;
+  overflow-Y: auto;
+  float: left;
+  margin: 0 auto;
+  width: calc(100% - 1194px);
+}
+.login .container {
+  width: 505px;
+  margin: 0 auto;
+  position: relative;
+}
+.login .container h1 {
+  margin-top: 100px;
+  font-size: 35px;
+  font-weight: bolder;
+    color: var(--main-color);
+}
+.login .container .login-form {
+  margin-top: 112px;
+}
+.login .container .login-form form {
+  display: -ms-grid;
+  display: grid;
+}
+.login .container .login-form form input {
+  font-size: 16px;
+  font-weight: normal;
+  background: rgba(57, 57, 57, 0.07);
+  margin: 12.5px 0;
+  height: 68px;
+  border: none;
+  padding: 0 30px;
+  border-radius: 10px;
+}
+.login .container .login-form form button[type=submit] {
+  background-color: var(--main-color) ;
+  border: none;
+  margin-top: 124px;
+  margin-bottom: 20px;
+  width: 241px;
+  height: 58px;
+  text-transform: uppercase;
+  color: var(--white-pinkish-color);
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 20px;
+}
+.login .container .login-form form button[type=submit]:hover::after {
+  opacity: 1;
+}
+.login .container .login-form form button[type=submit]::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 10px;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  right: 0;
+  bottom: 0;
+  background-color: #cd3939;
+}
+.login .container .remember-form {
+  position: relative;
+  margin-top: -30px;
+}
+.login .container .register{
+color: var(--main-color);
+
+}
+.login .container .register a{
+color: var(--main-color);
+    font-weight: bold;
+}
+.login .container .remember-form input[type=checkbox] {
+  margin-top: 9px;
+}
+.login .container .remember-form span {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  top: 32px;
+  color: var(--main-color);
+  margin-left: 15px;
+}
+.login .container .forget-pass {
+  position: absolute;
+  right: 0;
+  margin-top: 189px;
+}
+.login .container .forget-pass a {
+  font-size: 16px;
+  position: relative;
+  font-weight: normal;
+  color: var(--main-color);
+}
+.login .container .forget-pass a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 100px;
+  background-color: var(--main-color);
+  bottom: -4px;
+  left: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+  right: 0;
+}
+.login .container .forget-pass a:hover::after {
+  opacity: 1;
+}
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="container" style="padding-bottom:15px;padding-top: 1rem ">
+        <nav class="navbar">
+            <a class="logo" href="index.html">Hotel</a>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="open"></i>
+                <i class="fas fa-times" id="close"></i>
+            </label>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="restaurant.html" class="nav-link">Restaurant</a></li>
+                    <li class="nav-item"><a href="spa.html" class="nav-link">Spa</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="offers.html" class="nav-link">Offers</a></li>
+                    <li class="nav-item"><a href="map.html" class="nav-link">Map</a></li>
+                    <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="feedBack.html" class="nav-link">FeedBack</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item dropdown">
+                          <button class="dropbtn">Account<i class="fa fa-caret-down"></i></button>
+                          <div class="dropdown-content">
+                            <a href="registration.html" class="nav-link">Register</a>
+                            <a href="login.html" class="nav-link">Log in</a>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link book-btn">Book</a></li>
+                </ul>
+        </nav>
+  </div>
+
+
+<!--Login form-->
+      <div class="parent clearfix">
+    <div class="bg-illustration"></div>
+
+    <div class="login">
+      <div class="container">
+        <h1>Login to your account</h1>
+
+        <div class="login-form">
+          <form action="">
+            <input type="email" placeholder="E-mail Address">
+            <input type="password" placeholder="Password">
+
+            <div class="remember-form">
+              <input type="checkbox">
+              <span>Remember me</span>
+            </div>
+            <div class="forget-pass">
+              <a href="#">Forgot Password ?</a>
+            </div>
+
+            <button type="submit">LOG-IN</button>
+
+            <div class="register">
+                <p>  Don't have account ? <a href="registration.html"><span>Register</span></a></p>
+            </div>
+          </form>
+        </div>
+
+      </div>
+      </div>
+  </div>
+
+<!--footer-->
+      <footer>
+        <div class="container">
+            <div class="back-to-top">
+                <a href="#rooms-list"><i class="fas fa-chevron-up"></i></a>
+            </div>
+            <div class="footer__content row">
+                <div class="col-3">
+                    <h4>About</h4>
+                    <p>The Pyramids’s legend dates back to 1865, when The Cairo, Egypt opened as Africa’s first 'Grand Hotel'. 1865 is Cairo Hospitality Group's way of expressing appreciation for valuable guest support to our collection of hotels.</p>
+                </div>
+                <div class="col-3">
+                    <h4>Payment Methods</h4>
+                    <p>Pay any way you choose, we support all payment options</p>
+                    <ul class="payment-methods">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-paypal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-visa"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-cc-mastercard"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-apple-pay"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <h4>Get Social</h4>
+                    <p>Follow us on social media and keep in touch with Pyramids.</p>
+                    <ul class="social-icons">
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-tripadvisor"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
