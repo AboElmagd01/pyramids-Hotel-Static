@@ -469,13 +469,13 @@ label #close {
   height: 100%;
   box-shadow: inset 1px 0 0 #ECEFF1;
 }
-.timetable .time-interval {
+.timetable .rooms-avail {
   grid-area: time;
   display: grid;
   grid-template-rows: repeat(6, 1fr);
   font-size: 20px;
 }
-.timetable .time-interval > div {
+.timetable .rooms-avail > div {
   display: flex;
   align-items: center;
   justify-content: center;
