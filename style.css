@@ -33,7 +33,7 @@
     --main-color: #5f3131;
     --white-pinkish-color : #FAF2F7;
     --white-color: #fff;
-    --secondry-black: rgba(140, 47, 47, 0.8);
+    --secondry-black: rgba(140, 47, 47, 0.5);
 }
 .dark {
     --main-color: #000;
