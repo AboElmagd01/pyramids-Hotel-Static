@@ -1,12 +1,30 @@
-// TESTIMONIAL SLIDER
-$('.slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    fade: true,
-    arrows: false
-});
+// Theme-Mode
+
+window.onload = function() {
+      let currentTheme = localStorage.getItem("mytheme") || "default";
+
+      setTheme("default", currentTheme);
+
+      const themeSelector = document.getElementById("theme-selector");
+      themeSelector.value = currentTheme;
+
+      themeSelector.addEventListener("change", function(e) {
+        const newTheme = e.currentTarget.value;
+        setTheme(currentTheme, newTheme);
+      });
+
+      function setTheme(oldTheme, newTheme) {
+        const body = document.getElementsByTagName("body")[0];
+
+        body.classList.remove(oldTheme);
+        body.classList.add(newTheme);
+
+        currentTheme = newTheme;
+
+        // Store the new theme in local storage
+        localStorage.setItem("mytheme", newTheme);
+      }
+    };
 
 
 // Rooms Layout
@@ -44,33 +62,6 @@ return false;
 }
 }
 
-// Theme-Mode
-
-window.onload = function() {
-      let currentTheme = localStorage.getItem("mytheme") || "default";
-
-      setTheme("default", currentTheme);
-
-      const themeSelector = document.getElementById("theme-selector");
-      themeSelector.value = currentTheme;
-
-      themeSelector.addEventListener("change", function(e) {
-        const newTheme = e.currentTarget.value;
-        setTheme(currentTheme, newTheme);
-      });
-
-      function setTheme(oldTheme, newTheme) {
-        const body = document.getElementsByTagName("body")[0];
-
-        body.classList.remove(oldTheme);
-        body.classList.add(newTheme);
-
-        currentTheme = newTheme;
-
-        // Store the new theme in local storage
-        localStorage.setItem("mytheme", newTheme);
-      }
-    };
 
 // CLOSE THE NAV WHEN NAVLNKS ARE CLICKED MOBILE ONLY
 let navList = document.querySelector('.nav-list');
@@ -81,3 +72,15 @@ navLinks.forEach(function (navLink) {
         navList.style.left = '-100%';
     })
 });
+
+
+// TESTIMONIAL SLIDER
+$('.slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true,
+    arrows: false
+});
+
