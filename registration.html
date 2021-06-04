@@ -41,7 +41,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea,
-select {
+#job {
   background: rgba(255,255,255,0.01);
   border: none;
   font-size: 16px;
@@ -50,18 +50,18 @@ select {
   outline: 0;
   padding: 15px;
   width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
+  background-color: var(--secondry-black);
+  color: var(--main-color);
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
 }
 
 input[type="radio"],
-input[type="checkbox"] {`
+input[type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
-select {
+select  {
   padding: 6px;
   height: 32px;
   border-radius: 2px;
@@ -156,12 +156,20 @@ label.light {
                     </li>
                     <li class="nav-item"><a href="rooms.html" class="nav-link book-btn">Book</a></li>
                 </ul>
+                              <div style="width: 100px; padding-left: 150px">
+                      <select id="theme-selector" class="nav-list" >
+                         <option class="nav-link" value="default">Default</option>
+                         <option class="nav-item" value="dark">Blue mode</option>
+                         <option class="nav-item" value="black">Dark mode</option>
+                         <option class="nav-item" value="bl">Purple mode</option>
+                        </select>
+                     </div>
 
         </nav>
     </div>
 
    <!-- Account  Registration -->
-    <div style="background-color: #9d5252;color: white;">
+    <div style="background-color: var(--white-pinkish-color);color: var(--main-color)">
 
       <form name="register" action="index.html" method="post">
 
