@@ -47,12 +47,26 @@ rowClasses.forEach(element => {
 }
 
 // Validation
-function ValidateEmail(inputText)
+function ValidateEmailLogin(inputText)
 {
 var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 if(inputText.value.match(mailformat))
 {
 alert("Welcome to Pyramids!");
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.login.email.focus()
+return false;
+}
+}
+
+function ValidateEmailSignUp(inputText)
+{
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(inputText.value.match(mailformat))
+{
 }
 else
 {
